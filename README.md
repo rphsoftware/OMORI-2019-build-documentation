@@ -12,7 +12,7 @@ For that, you will need:
 ## Installing OneLoader
 In order to be able to decrypt the game files, you will need to install [OneLoader](https://github.com/rphsoftware/OneLoader/releases).
 
-Then, navigate to your OMORI folder, on Windows, it would usually be in `C:\Program Files\Steam\steamapps\common\OMORI` but it is recommeneded to open the folder from Steam itself. Simply right-click the game in your library, hover over *Manage* and click on *Browse local files...*
+Then, navigate to your OMORI folder, on Windows, it would usually be in `C:\Program Files\Steam\steamapps\common\OMORI` but it is recommended to open the folder from Steam itself. Simply right-click the game in your library, hover over *Manage* and click on *Browse local files...*
 
 Extract the entirety of your OneLoader zip into this folder, if everything went alright, you should be prompted to replace exactly one file. Allow the replacement.
 
