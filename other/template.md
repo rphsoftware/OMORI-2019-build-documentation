@@ -1,5 +1,6 @@
 # other/file\_name
 **File status**
+
 The file status should either be *Only in 2019 build*, *Changes from 2019 build* or *Only in release build*
 
 # Description
