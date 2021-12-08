@@ -93,3 +93,13 @@ To decrypt the 2019 build, follow the exact same steps as above for **Decrypting
 
 And congratulations! You now have a copy of OMORI as it was in 2019.
 
+# How to contribute
+Of course, this repository was mainly made to share finds from the 2019 build and to document them.
+
+1. Find something of interest in the build. Make sure that it should differ from the released game.
+2. Fork the repo. 
+3. Make your changes.
+4. Make a pull request. Before doing this, make sure that your contribution abides be the appropriate template.
+5. Assign the pull request to the appropriate issue.
+
+
