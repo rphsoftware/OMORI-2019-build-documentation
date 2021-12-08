@@ -4,10 +4,10 @@ Documentation of all changes from the "leaked" 2019 OMORI build to the first rel
 # Installing the 2019 build
 If you would like to help us documenting the changes or would simply like to explore them yourself, you will first need to acquire the 2019 build files.
 For that, you will need:
-	- A copy of [OMORI](https://store.steampowered.com/app/1150690/OMORI/)
-	- The latest version of [OneLoader](https://github.com/rphsoftware/OneLoader/releases)
-	- A text editor
-	- [RPG Maker MV](https://store.steampowered.com/app/363890/RPG_Maker_MV/) (Optional)
+- A copy of [OMORI](https://store.steampowered.com/app/1150690/OMORI/)
+- The latest version of [OneLoader](https://github.com/rphsoftware/OneLoader/releases)
+- A text editor
+- [RPG Maker MV](https://store.steampowered.com/app/363890/RPG_Maker_MV/) (Optional)
 
 ## Installing OneLoader
 In order to be able to decrypt the game files, you will need to install [OneLoader](https://github.com/rphsoftware/OneLoader/releases).
