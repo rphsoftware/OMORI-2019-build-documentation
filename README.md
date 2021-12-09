@@ -47,7 +47,7 @@ To decrypt your game, you must have OneLoader installed as described above.
 ## Installing the 2019 build as a mod
 To be able to play and/or decrypt the 2019 build of OMORI you will first need to create a OneLoader mod with all of its data.
 
-The 2019 build data can be found in your regular encrypted OMORI files, navigate to `OMORI/www/img/characters/`, you should find a folder named `data`, that folder contains all of the known data about the 2019 build. Take note of its path as we will need to copy it later.
+The 2019 build data can be found in the regular encrypted OMORI v1.0.0 files, downgrade to 1.0.0 with the steps above and navigate to `OMORI/www/img/characters/`, you should find a folder named `data`, that folder contains all of the known data about the 2019 build. Take note of its path as we will need to copy it later.
 
 1. Navigate to your `OMORI/www/mods`, that directory should have been created upon installing OneLoader, create a new directory inside of it, you may call it whatever you want. For the purposes of this guide we will assume you have called it `2019-build`
 2. Copy the previously mentionned `data` folder inside of `2019-build` so that `2019-build` only has one subdirectory called `data`
