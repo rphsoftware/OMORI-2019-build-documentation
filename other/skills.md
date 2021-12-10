@@ -164,6 +164,101 @@ This skill appears to be an idle skill that wasn't completed in this build. This
 This skill would've increased the stress count during one of the final fights
 
 ## Changed skills
-TODO
+Changes will be represented with an arrow (=>), the 2019 version of the value will be on the left side of the arrow, the release value will be on the right side.
+
+### GAURD => GUARD (id: 2)
+- Description: None => `"Acts first, reducing damage taken for 1 turn.\nCost: 0"`
+
+### RUN AWAY (id: 6)
+- Message: " flees." => " flees!"
+
+The skill would not actually make the character escape in the 2019 build, but it does in the release build.
+
+### ENEMY HAPPY SKILL (id: 12)
+
+The skill would apply happy in a slightly different way, which was unnecessarily complicated in the final build
+
+### ATTACK (id: 15)
+- Message: `" attacks"` => `" attacks!"`
+
+### TEST ATTACK (id: 18)
+- Animation ID: 68 => 307
+- Damage formula: `999` => `2` (Variation 20 => 0) 
+- Message: `" attacks"` => `" attacks!"`
+
+The skill also did not have a battle message type and whole action tag. This skill also inflicts *SAD* on the target in the release build but not in the 2019 build.
+
+### ATTACK (id: 21)
+- Element: Normal Attack => None
+- Description: `"Omori's Basic Attack"` => `"OMORI's Basic Attack"`
+- Base Success rate: 91% => 100%
+
+This skill would not be hidden from the skill menu in the 2019 build but it is in the release build.
+This change also applies to the two other attack skills (which are used to display different follow-ups)
+
+### ATTACK NO ACS (id: 24)
+- Element: Normal Attack => None
+- Description: `"Omori's Basic Attack"` => `"OMORI's Basic Attack"`
+
+This skill would not be hidden from the skill menu in the 2019 build but it is in the releae build.
+
+### OBSERVER (id: 25)
+- Description: `"Stare at an enemy\nReveals an enemies HEART and JUICE"` => `"Predicts who a foe will target next turn.\nCost: 0"`
+- Message: `" focuses his vision!"` => None
+- Speed: 0 => -1000
+
+This skill would act completely differently to its release version. Upon being used, it would write in the battle log the current health and juice of the selected foe. *OBSERVE* was likely remade because of the health bar that is visible when selecting an enemy to attack.
+
+### SAD POEM (id: 26)
+- Description: `"Read a sad poem\nMakes someone SAD"` => `"Inflicts SAD on a friend or foe.\nCost: 5"`
+
+This skill would be hidden from the menu in the 2019 build.
+
+### STAB (id: 27)
+- Damage formula: `a.atk * 2 - b.def` => `(a.isStateAffected(10) || a.isStateAffected(11) || a.isStateAffected(12)) ? a.atk * 2 : a.atk * 1.5 - b.def;`
+- Juice cost: 15 => 13
+- Description: `"Stab an enemy\nAlways deals a critical hit"` => `"Always deals a critical hit.<br>\nIgnores DEFENSE when OMORI is SAD. Cost: 13"`
+
+This skill would, as described by the description, not have its secondary ability of ignoring defense against *SAD*
+ foes in the 2019 builds.
+
+### HACK AWAY (id: 28)
+- Damage formula: `a.atk * 2 - b.def` => `(a.isStateAffected(14) || a.isStateAffected(15) || a.isStateAffected(16)) ? a.atk * 2.25 - b.def : a.atk * 2 - b.def;`
+- Description: `"Swing your knife wildly\nAttacks 3 times hitting random enemies"` => `"Attacks 3 times, hitting random foes.\nCost: 30"`
+- Juice cost: 25 => 30
+
+### PICK POCKET => PICKPOCKET (id: 29)
+- Description: `"Reach into an enemies pocket\nSteal an item from an enemy"` => `"DELETE"`
+- Message: `" tries to steal an item."` => `" tries to steal an item..."`
+- Message type: None => `PICK POCKET`
+
+### BREAD SLICE (id: 30)
+- Damage formula: `a.atk * 2 - b.def` => `a.atk * 2.5 - b.def`
+- Description: `"Make an enemy into bread\nIf this skill defeats an enemy gain a bread"` => `"If this skill defeats a foe, gain BREAD.\nCost: 10"`
+- Juice Cost: 12 => 10
+
+This skill had the property to also remove the immortal property of a target if it has it.
+
+### HIDE (id: 31)
+- Description: `"Hide from you enemies\nEnemies cannot target Omori for 1 turn"` => `"Foes cannot target OMORI for 1 turn.\nCost: 7"`
+- Speed: 2000 => 1000
+
+### QUICK SLICE => LUCKY SLICE (id: 32)
+- Damage formula: `a.atk * 2 - b.def` => `(a.isStateAffected(6) || a.isStateAffected(7) || a.isStateAffected(8)) ? (a.atk + a.luk) * 2 - b.def : (a.atk + a.luk) * 1.5 - b.def;`
+- Description: `"A fast cut\nAttack goes first"` => `"Acts first. An attack that's stronger\nwhen OMORI is HAPPY. Cost: 15"`
+- Juice Cost: 10 => 15
+- Speed: 1000 => 2000
+
+### TRICK (id: 33)
+- Element: HAPPY => None
+- Damage formula: `a.atk * 2 - b.def` => `a.atk * 3 - b.def`
+- Description: `"Trick an enemy and hurt their feelings\nDeals extra damage to HAPPY enemies"` => `"Deals damage. If the foe is HAPPY, greatly \nreduce its SPEED. Cost: 20"`
+- Hit type: Physical Attack => Certain Hit
+- Juice Cost: 10 => 20
+
+The ability to deal extra damage to happy foes was implemented differently in the release build. It uses the element system in the 2019 build and notes in the release build.
+
+### SHUN (id: 34)
+
 ## Added skills
 TODO
