@@ -256,9 +256,56 @@ This skill had the property to also remove the immortal property of a target if 
 - Hit type: Physical Attack => Certain Hit
 - Juice Cost: 10 => 20
 
-The ability to deal extra damage to happy foes was implemented differently in the release build. It uses the element system in the 2019 build and notes in the release build.
+The anti-happy ability of this skill would've been a simple damage increase but was changed to be more useful.
 
 ### SHUN (id: 34)
+- Element: SAD => None
+- Damage formula: `a.atk * 2 - b.def` => `a.atk * 3 - b.def`
+- Description: `"Shun an enemy and hurt their feelings\nDeals extra damage to SAD enemies"` => `"Deals damage. If the foe is SAD, greatly \nreduce its DEFENSE. Cost: 20"`
+- Juice Cost: 10 => 20
+
+The anti-sad ability of this skill would've been a simple damage increase but was changed to be more useful.
+
+### MOCK (id: 35)
+- Element: ANGRY => None
+- Damage formula: `a.atk * 2 - b.def` => `a.atk * 3 - b.def`
+- Description: `"Mock an enemy and hurt their feelings\nDeals extra damage to ANGRY enemies"` => `"Deals damage. If the foe is ANGRY, greatly \nreduce its ATTACK. Cost: 20"`
+- Juice Cost: 10 => 20
+
+This skill's anti-angry ability would've been a simple damage increase but was changed to be more useful.
+
+### EXPLOIT (id: 36)
+- Element: EMOTION => None
+- Damage formula: `a.atk * 2 - b.def` => `b.isAnyEmotionAffected() ? a.atk * 3.5 - b.def : a.atk * 2.5 - b.def`
+- Description: `"Exploit an enemy and hurt their feelings\nDeals extra damage to HAPPY, SAD, or ANGRY enemies"` => `"Deals extra damage to a HAPPY, SAD, or<br>\nANGRY foe. Cost: 30"`
+- Juice Cost: 15 => 30
+
+This skill's special ability would've used the element system before it was changed to be a feature in the damage formula. Also, the name of the skill was changed to remove a space at the end of the name. ("EXPLOIT " => "EXPLOIT")
+
+### FINAL STRIKE (id: 37)
+- Damage formula: `a.atk * 4 - b.def` => `a.atk * 3`
+- Description: `"Omori unleashes his strongest technique\nIf this skill defeats an enemy, Omori gets stronger"` => `"Strikes all foes, ignoring their DEFENSE.\nCost: 50"`
+- Messages: None => `" unleashes his ultimate"`, `"attack!"`
+- Message type: `FINAL STRIKE` => None
+- Scope: 1 Enemy => All Enemies
+- Juice Cost: 40 => 50
+
+In the 2019 build, this skill would give the state 23 to OMORI. It would also be able to miss.
+
+[//]: # "TODO: Say which state is state 23 and what state 23 does"
+
+### ATTACK AGAIN (1) => ATTACK AGAIN CHECK (id: 46) (and other follow-ups)
+*ATTACK AGAIN* and every other follow-up had their first version replaced with a "check" version. This version would call a common event which contains most of the follow-up's ability to cast different skills based on the player's progress in the game.
+
+In addition, the affected followups have had the following changes to their damage formulas:
+- ATTACK AGAIN (2) (id: 47): `1` => `(a.atk * 2 + a.luk) - b.def `
+- ATTACK AGAIN (3) (id: 48): `a.atk * 2 ` => `(a.atk * 2 + a.luk) - b.def`
+- TRIP (1) (id: 49 => 60): `a.level >= 30 ? b.addDebuff(6, 4); a.atk * 2 : a.level >= 15 ? b.addDebuff(6, 4); a.atk * 2 - b.def : b.addDebuff(6, 4); 0` => `(a.atk + a.luk) - b.def`
+-  TRIP (2) (id: 50): `a.atk * 2 - b.def` => `(a.atk + a.luk) - b.def`
+- TRIP (3) (id: 51): `a.atk * 2 - b.def` => `(a.atk + a.luk) - b.def`
+
+
+*RELEASE ENERGY* (id: 52) would not have multiple versions in the 2019 build, but instead scale according to OMORI's level. It would deal 1000 damage if OMORI is level 30+, 600 damage if OMORI is level 15+ and 300 otherwise.
 
 ## Added skills
 TODO
