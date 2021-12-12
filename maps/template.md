@@ -22,7 +22,7 @@ Description of all changes in event\_01
 - event_04 (x2)
 - event_05
 ```
-If a similar or identical change was made to multiple siliar events (enemies, tags, etc.), they may all be listed under a single subsection. A list of all events in the section must begin the section, if multiple events have the same name, a multiplying suffix ("(x2)", "(x3)", etc.) may be added.
+If a similar or identical change was made to multiple similar events (enemies, tags, etc.), they may all be listed under a single subsection. A list of all events in the section must begin the section, if multiple events have the same name, a multiplying suffix ("(x2)", "(x3)", etc.) may be added.
 
 ## Structure
 Description of changes to the level structure, this can be identified if the map loaded in-game does not align with the events.
